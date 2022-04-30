@@ -4,8 +4,6 @@ import { View, StyleSheet, FlatList } from 'react-native';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import products from '../../data/products';
 
-
-
 const HomeScreen = () => {
     return (
         <View style={styles.page}>
@@ -19,12 +17,7 @@ const HomeScreen = () => {
             <FlatList 
             data={products}
             renderItem={({item}) => <ProductItem item={item}/>}
-            />
-
-
-
-
-                            
+            />                            
         </View>
     )
 
