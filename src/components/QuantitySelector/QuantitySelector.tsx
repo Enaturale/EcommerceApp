@@ -1,13 +1,14 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native'
 import React from 'react'
 
-const QuantitySelector = () =>{
+const QuantitySelector = ({quantity, setQuantity}) =>{
     const onMinus = () => {
-         
+        //to prevent people from going below zero we can add a check here
+        setQuantity(Math.max(0, quantity - 1));         
     }
 
     const onPlus = () => {
-
+        setQuantity(quantity + 1);
     }
 
   return (
@@ -16,7 +17,7 @@ const QuantitySelector = () =>{
           <Text style={styles.pressableText}>-</Text>
       </Pressable>
 
-      <Text style={styles.quantity}>0</Text>
+      <Text style={styles.quantity}>{quantity}</Text>
 
       <Pressable onPress={onPlus} style={styles.pressable}>
           <Text style={styles.pressableText}>+</Text>
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#c2c2c2'
     },
     pressableText:{
+        fontSize: 18,
 
     },
     quantity:{

@@ -4,11 +4,14 @@ import styles from './styles';
 import product from '../../data/product';
 import { Picker } from '@react-native-picker/picker';
 import QuantitySelector from '../../components/QuantitySelector/QuantitySelector';
+import Button from '../../components/Buttons/Button';
 
 
 
 const ProductScreen = () =>{
     const [selectedOption, setSelectedOption] = useState(product.options[0]);
+    const [quantity, setQuantity] = useState(1);
+
     return(
         <View>
             <Text style={styles.title}>{product.title}</Text>
@@ -34,7 +37,8 @@ const ProductScreen = () =>{
             </Text>
 
             {/* Quantity selector */}
-            <QuantitySelector />
+            {/* Create a seperate component for this because it is reusable */}
+            <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
             
 
             {/* Price */}
@@ -45,6 +49,12 @@ const ProductScreen = () =>{
             </Text>
 
             {/*  Buttons */}
+            {/* Create a seperate component for this because it is reusable */}
+            <Button text={'Add to Cart'} onPress={async () => console.log('Added to cart')} />
+            <Button text={'Buy Now'} onPress={async () => console.log('Bought ')} />
+
+
+
         </View>
     )
 }
