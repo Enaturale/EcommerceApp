@@ -21,6 +21,7 @@ import {
 
 import HomeScreen from './src/screens/Homescreen';
 import ProductScreen from './src/screens/ProductScreen/ProductScreen';
+import ShoppingCart from './src/screens/ShoppingCart/ShoppingCart';
 
 
 
@@ -36,7 +37,8 @@ const App = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
       {/* <HomeScreen />      */}
-      <ProductScreen />
+      {/* <ProductScreen /> */}
+      <ShoppingCart />
     </SafeAreaView>
   );
 };

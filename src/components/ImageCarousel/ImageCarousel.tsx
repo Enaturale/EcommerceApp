@@ -9,14 +9,14 @@ import {
 import React, { useCallback, useState } from 'react'
 
 
-const ImageCarousel= ({image}: {image: [string]}) => {
+const ImageCarousel= ({image}) => {
     //to fit the image to the size of the screen
     const windowWidth = useWindowDimensions().width;
 
     //we need a state for the dots
     const [activeIndex, setActiveIndex] = useState(1);
 
-    //
+    //usecallback will allow to use another function
     const onFlatlistUpdate= useCallback(({viewableItems}) => {
         if(viewableItems.length > 0){
           setActiveIndex(viewableItems[0].index || 0);
@@ -56,6 +56,7 @@ const ImageCarousel= ({image}: {image: [string]}) => {
       </View> */}
 
       <View style={styles.dotContainer}>
+        {/* to loop through the images per dot */}
        {image.map((image, index) =>(
           <View 
              style={[

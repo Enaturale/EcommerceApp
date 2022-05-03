@@ -56,6 +56,10 @@ const ProductScreen = () =>{
             <Button text={'Add to Cart'} onPress={async () => console.log('Added to cart')} />
             <Button text={'Buy Now'} onPress={async () => console.log('Bought ')} />
 
+            <View style={styles.footer}>
+
+            </View>
+
 
 
         </ScrollView>
