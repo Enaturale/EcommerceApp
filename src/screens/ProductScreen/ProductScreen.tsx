@@ -5,6 +5,7 @@ import product from '../../data/product';
 import { Picker } from '@react-native-picker/picker';
 import QuantitySelector from '../../components/QuantitySelector/QuantitySelector';
 import Button from '../../components/Buttons/Button';
+import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
 
 
 
@@ -17,6 +18,8 @@ const ProductScreen = () =>{
             <Text style={styles.title}>{product.title}</Text>
 
             {/* image carousel */}
+            {/* This will be an horizaontal list of images we can swipe from left to right */}
+            <ImageCarousel image={product.images } />
 
             {/* Option Selector */}
             <Picker            

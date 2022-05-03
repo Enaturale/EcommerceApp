@@ -6,9 +6,10 @@ const styles = StyleSheet.create({
         backgroundColor:'white'
     },
     title:{
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: 'bold',
         color:'#007eb9',
+        marginBottom: 10,
 
     },
     price:{
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     },
     description:{
         marginVertical: 10,
-        fontSize: 15,
+        fontSize: 13,
         lineHeight: 22,
         
     }
