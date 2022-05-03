@@ -3,7 +3,7 @@ import {Pressable, Text, StyleSheet} from 'react-native';
 
 interface ButtonProps{
     text: string;
-    onPress: () => {};
+    onPress: () => void;
 }
 
 const  Button = ({text, onPress}: ButtonProps) => {
@@ -19,7 +19,7 @@ const  Button = ({text, onPress}: ButtonProps) => {
 const styles = StyleSheet.create({
     pressable:{
         backgroundColor: '#e49611',
-        margin: 10,
+        marginVertical: 10,
         height: 40,
         justifyContent:'center',
         alignItems:'center',

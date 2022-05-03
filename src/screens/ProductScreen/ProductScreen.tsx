@@ -13,13 +13,13 @@ const ProductScreen = () =>{
     const [quantity, setQuantity] = useState(1);
 
     return(
-        <View>
+        <View style={styles.container}>
             <Text style={styles.title}>{product.title}</Text>
 
             {/* image carousel */}
 
             {/* Option Selector */}
-            <Picker
+            <Picker            
               selectedValue={selectedOption}
               onValueChange={(itemValue, itemIndex) =>
                 setSelectedOption(itemValue)
@@ -27,7 +27,7 @@ const ProductScreen = () =>{
                 {/* <Picker.Item label='Black' value="Java"/>
                 <Picker.Item label='Space Array' value="JavaScript"/> */}
                 {product.options.map((option) =>
-                 (<Picker.Item label={option} value={option} />)
+                 (<Picker.Item label={option} value={option} style={styles.picker} />)
                  )}
             </Picker>
 
