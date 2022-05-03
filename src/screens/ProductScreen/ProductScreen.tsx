@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text} from 'react-native'
+import {View, Text, ScrollView} from 'react-native'
 import styles from './styles';
 import product from '../../data/product';
 import { Picker } from '@react-native-picker/picker';
@@ -14,7 +14,7 @@ const ProductScreen = () =>{
     const [quantity, setQuantity] = useState(1);
 
     return(
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.title}>{product.title}</Text>
 
             {/* image carousel */}
@@ -58,7 +58,7 @@ const ProductScreen = () =>{
 
 
 
-        </View>
+        </ScrollView>
     )
 }
 
